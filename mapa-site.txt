@@ -1,0 +1,13 @@
+kioficina
+|--public
+|--|--assets
+|--|--uploads
+|--|--index.html
+|--vendor
+|--core
+|--config
+|--app
+|--|--controllers
+|--|--models
+|--|--views
+|--|--|--templates

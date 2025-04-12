@@ -1,0 +1,7 @@
+.sidebar-brand {
+    height: 7.5rem;
+}
+
+.sidebar-brand .brand-link .brand-image {
+    max-height: 90px;
+}

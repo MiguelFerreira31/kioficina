@@ -1,0 +1,202 @@
+/*--------------------------------------------------------------
+  9. Footer
+----------------------------------------------------------------*/
+
+.footer-bg {
+  background-color: var(--black-color);
+}
+
+.footer.style-1 {
+  .footer-email {
+    position: relative;
+    .background-text {
+      z-index: 9;
+      opacity: 0.3;
+      text-align: center;
+      font-family: Oxanium;
+      font-size: 110px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #222 0%, #fff 50%, #222 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s infinite;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-color: #2e2e2ecb;
+      $background-size: 200px 100%;
+      @include prefixer(background-size, $background-size);
+    }
+
+    .footer-heading-email {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 100px;
+      .email-title {
+        text-transform: uppercase;
+        max-width: 670px;
+      }
+      .email-form {
+        display: flex;
+        gap: 30px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $primary;
+        .email-input {
+          color: $white;
+          background-color: transparent;
+          border: 0;
+          &:focus {
+            outline: none;
+          }
+        }
+        .submit-btn {
+          background-color: $primary;
+          position: relative;
+          overflow: hidden;
+          padding: 8px 13px;
+          border: 0px;
+        }
+
+        .submit-btn:hover .send svg {
+          transition: all 0.3s ease;
+          animation: sending 0.5s linear 0.3s forwards;
+        }
+      }
+    }
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    .footer-info {
+      max-width: 420px;
+      .desp {
+        font-size: 18px;
+      }
+      .phone {
+        color: $white;
+        font-size: 48px;
+        font-weight: 700;
+      }
+    }
+    .footer-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .menu-title {
+        font-size: 18px;
+        color: var(--white-color);
+        text-transform: uppercase;
+      }
+    }
+    .footer-address {
+      max-width: 223px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      a {
+        font-size: 18px;
+      }
+      .adress-title {
+        font-size: 18px;
+        color: var(--white-color);
+        text-transform: uppercase;
+      }
+    }
+  }
+  .copy-right {
+    padding: 24px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .title {
+      font-size: 18px;
+    }
+    .social-icon {
+      display: flex;
+      gap: 15px;
+      a {
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+          transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        }
+      }
+      path {
+        transition: fill 0.3s ease-in-out;
+      }
+      :hover path {
+        fill: $primary;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer.style-1 {
+    .footer-email {
+      .background-text {
+        transform: translate(0%, 0%);
+      }
+      .footer-heading-email {
+        flex-direction: column-reverse;
+        gap: 30px;
+        text-align: center;
+      }
+    }
+    .footer-content {
+      flex-wrap: wrap;
+      gap: 30px;
+      .footer-info {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer.style-1 {
+    .footer-email {
+      .footer-heading-email {
+        text-align: start;
+        align-items: flex-start;
+        .email-title {
+          font-size: 18px;
+        }
+      }
+    }
+    .footer-content {
+      .footer-info {
+        .phone {
+          font-size: 32px;
+        }
+      }
+    }
+    .copy-right {
+      flex-direction: column;
+    }
+  }
+}
+@keyframes sending {
+  0% {
+    transform: translateY(0);
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    transform: translate(40px, -60px);
+  }
+}

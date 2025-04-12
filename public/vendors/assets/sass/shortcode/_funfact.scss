@@ -1,0 +1,51 @@
+/*--------------------------------------------------------------
+  16. Funfact
+----------------------------------------------------------------*/
+
+.funfact-counter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ak-funfact.ak-style1 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .ak-funfact-number {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: $primary;
+    span {
+      font-size: 62px;
+    }
+    &.color-1 {
+      color: $white;
+    }
+  }
+  .ak-funfact-text {
+    margin-top: 10px;
+    p {
+      color: $white;
+      font-family: Oxanium;
+      font-weight: 700;
+      line-height: normal;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ak-funfact.ak-style1 {
+    margin-bottom: 00px;
+    text-align: start;
+    align-items: flex-start;
+    .ak-funfact-text {
+      p {
+        font-size: 22px;
+      }
+    }
+  }
+}

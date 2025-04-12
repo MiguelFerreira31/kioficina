@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+1. Basic Color Variable
+----------------------------------------------------------------*/
+
+$white: #fff;
+$black: #000;
+$primary: #ff3d24;
+$secondary: rgba(255, 61, 36, 0.7);
+$border: rgba(255, 255, 255, 0.25);
+$border-color-two: rgba(88, 30, 22, 0.6);
+
+:root {
+  --body-font-family: "Sarabun";
+  --heading-font-family: "Oxanium";
+  --body-color: #d3d3d3;
+  --body-bg-color: #101010;
+  --heading-color: #fff;
+  --border-color: #fff;
+  --white-color: #fff;
+  --black-color: #000000;
+  --primary-color: #ff3d24;
+}

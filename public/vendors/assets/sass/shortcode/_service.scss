@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+  15. Service
+----------------------------------------------------------------*/
+.service-progress-card-position-changes {
+  position: relative;
+  bottom: 132px;
+  z-index: 11;
+}
+
+.service-progress-card {
+  display: flex;
+  flex-direction: column;
+  &.style-two {
+    .service-item {
+      border: 1px solid $border-color-two;
+    }
+  }
+  &.style-three {
+    .progress-item {
+      .ak-border-width {
+        background-color: $border-color-two;
+      }
+    }
+    .service-item {
+      background-color: transparent;
+      align-items: flex-start;
+      text-align: start;
+      padding: 0px 55px 0px 0px;
+    }
+  }
+  .progress-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black-color);
+    padding: 45px 35px;
+    text-align: center;
+    font-size: 16px;
+    height: 100%;
+    .service-info {
+      .title {
+        margin-top: 15px;
+        margin-bottom: 9px;
+      }
+    }
+  }
+}
+
+.services-content {
+  max-width: 500px;
+  .ak-section-subtitle {
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .services-content {
+    flex-direction: column;
+    gap: 50px;
+    .service {
+      gap: 40px;
+    }
+  }
+}

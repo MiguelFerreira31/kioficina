@@ -1,0 +1,258 @@
+/*--------------------------------------------------------------
+  6. Slider
+----------------------------------------------------------------*/
+
+.ak-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Start slider hero 1 */
+.ak-slider-hero-1 {
+  overflow: hidden;
+  width: 100%;
+  .swiper-slide {
+    width: 100%;
+  }
+}
+
+.ak-slider-hero-two-1 {
+  overflow: hidden;
+  width: 100%;
+  .swiper-slide {
+    width: 100%;
+  }
+}
+.ak-swiper-controll-hero-1 {
+  position: absolute;
+  bottom: 80px;
+  right: 61px;
+  z-index: 10;
+}
+.ak-swiper-controll-hero-3 {
+  position: absolute;
+  bottom: 55px;
+  padding: 0 28px;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+}
+.ak-swiper-navigation-wrap {
+  display: flex;
+  gap: 80px;
+  padding: 30px;
+  .ak-swiper-button-next {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    .btn-cricle {
+      position: absolute;
+      height: 55px;
+      width: 55px;
+      border-radius: 50% 50% 50% 50%;
+      backdrop-filter: blur(100px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-arrow {
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      transform: translateX(10px);
+      svg {
+        width: 40px;
+        height: 55px;
+      }
+      &:hover {
+        transform: translateX(20px);
+      }
+    }
+  }
+  .ak-swiper-button-prev {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    .btn-cricle {
+      position: absolute;
+      height: 55px;
+      width: 55px;
+      border-radius: 50% 50% 50% 50%;
+      backdrop-filter: blur(100px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease-in-out;
+      transform: rotate(180deg);
+    }
+    .btn-arrow {
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      transform: translateX(10px);
+      svg {
+        width: 40px;
+        height: 55px;
+      }
+      &:hover {
+        transform: translateX(0px);
+      }
+    }
+  }
+}
+
+.hero-pagination {
+  z-index: 11;
+  position: absolute;
+  top: 40%;
+  right: 50px;
+  color: var(--White, #fff);
+  font-family: Oxanium;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  .hero-swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+  }
+  .hero-swiper-pagination .swiper-pagination-bullet {
+    color: #fff !important;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: transparent;
+  }
+}
+/* End slider hero 1 */
+
+/* Start slider testimonal */
+
+.ak-slider-testimonal {
+  overflow: hidden;
+  width: 100%;
+  .swiper-slide {
+    width: 100%;
+    &:not(.swiper-slide-active) {
+      opacity: 0 !important;
+    }
+  }
+}
+/* End slider testimonal */
+
+/*  Start Trusted Client  */
+.ak-trusted-client-slider {
+  overflow: hidden;
+  width: 100%;
+  .title {
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  .swiper-wrapper {
+    align-items: center;
+    .swiper-slide {
+      width: 14.4%;
+    }
+  }
+}
+/* End Trusted Client  */
+
+.team-single-page-slider {
+  height: 550px;
+  overflow: hidden;
+  width: 100%;
+  // position: relative;
+  .swiper-slide {
+    width: 75%;
+  }
+  .slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .team-single-page-swiper-controll {
+    width: 79%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .button-style {
+      width: 75px;
+      height: 75px;
+      background-color: #ffffff45;
+      border-radius: 50%;
+      position: relative;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+.ak-pricing-slider {
+  overflow: hidden;
+  width: 100%;
+  .swiper-slide {
+    width: 33.33%;
+    .pricing-card {
+      transition: all 0.5s;
+    }
+  }
+  .swiper-slide-active {
+    .pricing-card {
+      transition: all 0.5s;
+      background: rgba($primary, 60%);
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .ak-pricing-slider {
+    .swiper-slide {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ak-trusted-client-slider {
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 33.3%;
+      }
+    }
+  }
+
+  .team-single-page-slider {
+    height: 40vh;
+    .swiper-slide {
+      width: 60%;
+    }
+    .team-single-page-swiper-controll {
+      width: 72%;
+      .button-style {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .ak-swiper-controll-hero-3 {
+    display: none;
+  }
+  .ak-pricing-slider {
+    .swiper-slide {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .ak-swiper-controll-hero-1 {
+    display: none;
+  }
+}

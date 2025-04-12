@@ -1,0 +1,65 @@
+/*--------------------------------------------------------------
+  21. Cta
+----------------------------------------------------------------*/
+
+.cta {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  .cta-info {
+    max-width: 851px;
+    .cta-title {
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .cta-desp {
+      margin-bottom: 40px;
+      max-width: 725px;
+      font-size: 16px;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 13px 19px;
+      font-size: 18px;
+      color: $white;
+      text-transform: uppercase;
+      background-color: $primary;
+      @extend .btn-animation;
+    }
+  }
+}
+.cta .border-pr {
+  min-height: 100%;
+  width: 5px;
+  margin-top: 10px;
+  background-color: $primary;
+}
+
+.cta .border-wh {
+  min-height: 100%;
+  width: 5px;
+  margin-right: 55px;
+  margin-top: 10px;
+  background-color: #ffffff4a;
+}
+
+.testimonal-title {
+  position: relative;
+  .border-pr {
+    position: absolute;
+    min-height: 100%;
+    width: 5px;
+    background-color: $primary;
+  }
+  .border-wh {
+    position: absolute;
+    min-height: 100%;
+    margin-left: 4px;
+    width: 5px;
+    background-color: #ffffff4a;
+  }
+  .title {
+    margin-left: 15px;
+  }
+}

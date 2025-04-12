@@ -1,0 +1,134 @@
+/*--------------------------------------------------------------
+  28. Gallery
+----------------------------------------------------------------*/
+
+.lg-custom-thumbnails {
+  background-color: #040d10;
+  #lg-counter {
+    color: #fff;
+  }
+  .lg-icon {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  grid-auto-rows: minmax(350px, 200px);
+  grid-auto-flow: dense;
+
+  .item {
+    overflow: hidden;
+    position: relative;
+  }
+  .frame {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 100%;
+    transition: all 0.5s ease;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition-delay: 0.1s;
+  }
+  .frame span {
+    width: 26px;
+    height: 26px;
+  }
+  .item:hover .frame {
+    top: 0;
+  }
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+    transition-delay: 0.2s;
+  }
+  .item:hover img {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  .vertical {
+    grid-column: span 2;
+  }
+  .horizontal {
+    grid-row: span 2;
+  }
+  .big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+.video-gallery {
+  .gallery-img-content {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    .gallery-img-overlay {
+      position: absolute;
+      left: 20px;
+      opacity: 1;
+      right: 20px;
+      top: 20px;
+      bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease-in;
+      transform: scale(0.9);
+      .overlay-fr {
+        max-width: 80px;
+        max-height: 80px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#fff, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .overlay-se {
+          svg {
+            path {
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+      .overlay-se {
+        max-width: 50px;
+        max-height: 50px;
+        background-color: rgba(#fff, 0.3);
+        @extend .overlay-fr;
+      }
+    }
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:hover .gallery-img-overlay {
+      opacity: 1;
+      transform: scale(1);
+      background: rgba(3, 3, 3, 0.445);
+      .overlay-fr {
+        .overlay-se {
+          svg {
+            path {
+              fill: $primary !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

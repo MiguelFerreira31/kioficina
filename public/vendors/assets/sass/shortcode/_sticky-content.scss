@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------
+27. Sticky Content
+----------------------------------------------------------------*/
+.sticky-content {
+  display: flex;
+  gap: 50px;
+  flex-direction: column-reverse;
+  .content.style_2 {
+    .service {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .sticky-content {
+    width: 100%;
+    position: relative;
+    .sidebar {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      max-width: inherit;
+      float: right;
+      &.fixed {
+        position: fixed;
+      }
+      .service-card-style-2 {
+        width: 420px;
+      }
+      &.width-none {
+        width: 40% !important;
+      }
+    }
+    .content {
+      float: left;
+      width: calc(100% - 420px);
+      padding-right: 15px;
+      &.style_2 {
+        float: left;
+        padding-right: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        .service {
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+        }
+      }
+    }
+  }
+}

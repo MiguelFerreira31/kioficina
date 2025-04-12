@@ -1,0 +1,108 @@
+/*--------------------------------------------------------------
+  19. Pricing Card
+----------------------------------------------------------------*/
+
+.center-section-heading {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  &.type-two {
+    justify-content: space-between;
+  }
+}
+
+.pricing-card {
+  padding: 60px 75px;
+  min-width: 255px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 1;
+  background: rgb(255 0 0 / 0%);
+  backdrop-filter: blur(100px);
+  &.style-two {
+    padding: 25px;
+    border: 0px solid rgba(255, 255, 255, 00);
+    &:hover {
+      border: 0px solid rgba(255, 255, 255, 00);
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(100px);
+    }
+    .opation-all {
+      .opation {
+        justify-content: start;
+        .title {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &.active {
+    background: rgba($primary, 60%);
+  }
+  .pricing-heading {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .title {
+      font-size: 18px;
+    }
+    .main-price {
+      text-decoration-line: line-through;
+    }
+  }
+  .opation-all {
+    margin-bottom: 40px;
+    .opation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      .title {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .pricing {
+    flex-wrap: wrap;
+    .type-two {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .pricing {
+    gap: 50px;
+  }
+  .pricing-card {
+    padding: 60px 0px;
+    width: 100%;
+    &.style-two {
+      width: auto;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .pricing {
+    gap: 50px;
+  }
+  .pricing-card {
+    width: 100%;
+    &.style-two {
+      width: 100%;
+    }
+  }
+}

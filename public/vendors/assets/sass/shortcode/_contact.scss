@@ -1,0 +1,207 @@
+/*--------------------------------------------------------------
+  25. Contact
+----------------------------------------------------------------*/
+.contact-content {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  &.style-two {
+    @media screen and (min-width: 1450px) {
+      width: 110%;
+      gap: 100px;
+    }
+    align-items: center;
+    .contact-title-section {
+      max-width: 530px;
+    }
+  }
+  .contact-title-section {
+    max-width: 441px;
+    width: 100%;
+  }
+  .contact-form {
+    width: 100%;
+    &.form-bg {
+      padding: 75px;
+      background-color: $black;
+    }
+  }
+}
+
+.contact-form {
+  .from-inputs {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    input {
+      color: $white;
+      background-color: transparent;
+      padding: 12px 20px;
+      border: 1px solid $border;
+      flex: 1;
+      outline: none;
+      &:focus {
+        border-color: $white !important;
+        box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.19);
+      }
+    }
+    .type_1 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      label {
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+      input {
+        color: $white;
+        border: 1px solid #ff3d2470;
+        &:focus {
+          border-color: #ff3d2470 !important;
+          box-shadow: 0 0 0 0.25rem rgba(109, 10, 10, 0.486);
+        }
+      }
+      .date-time-icon {
+        position: absolute;
+        top: 54%;
+        right: 26px;
+        width: 20px;
+        height: 20px;
+        z-index: -10;
+      }
+    }
+  }
+  .from-textarea {
+    display: flex;
+    textarea {
+      padding: 12px 20px;
+      color: $white;
+      outline: none;
+      border: 1px solid $border;
+      flex-grow: 1;
+      background-color: transparent;
+      &:focus {
+        border-color: $white !important;
+        box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.19);
+      }
+    }
+    margin-bottom: 45px;
+    .type_1 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      label {
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      textarea {
+        color: $white;
+        border: 1px solid #ff3d2470;
+        &:focus {
+          border-color: #ff3d2470 !important;
+          box-shadow: 0 0 0 0.25rem rgba(109, 10, 10, 0.486);
+        }
+      }
+    }
+  }
+  input[type="time"],
+  input[type="date"] {
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    &::-webkit-calendar-picker-indicator {
+      background: transparent;
+      bottom: 0;
+      color: transparent;
+      position: absolute;
+      filter: invert(1);
+      cursor: pointer;
+      height: 100%;
+      right: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+.custom-file {
+  .custom-file-upload {
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    color: $primary;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    span {
+      color: $white;
+      font-size: 16px;
+    }
+  }
+  input {
+    display: none;
+  }
+}
+
+.contact-info {
+  display: flex;
+  gap: 40px;
+  .left-info {
+    max-width: 460px;
+    width: 100%;
+  }
+  .right-info {
+    width: 100%;
+    .info-card {
+      padding: 50px;
+      display: flex;
+      font-weight: 700;
+      line-height: normal;
+      font-size: 24px;
+      font-family: var(--heading-font-family);
+      justify-content: space-between;
+      color: $white;
+      &:nth-child(odd) {
+        background-color: $black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contact-form {
+    .from-inputs {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-info {
+    flex-direction: column;
+    .left-info {
+      width: 100%;
+    }
+    .right-info {
+      width: 100%;
+      .info-card {
+        padding: 45px 15px;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  }
+  .contact-content {
+    .contact-form {
+      &.form-bg {
+        padding: 25px;
+      }
+    }
+  }
+}

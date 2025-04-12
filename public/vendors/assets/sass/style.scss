@@ -1,0 +1,67 @@
+/* 
+|......................................................................
+| Template Name: CRAS
+| Author: Thememarch
+| Version: 1.0.0
+|--------------------------------------------------------------------------
+|--------------------------------------------------------------------------
+| TABLE OF CONTENTS:
+|--------------------------------------------------------------------------
+| 1. Basic Color Variable
+| 2. Typography
+| 3. Preloader
+| 4. Spacing
+| 5. General
+| 6. Slider
+| 7. Video Popup
+| 8. Header
+| 9. Footer
+| 10. Pagination
+| 11. Common Page Title
+| 12. Button
+| 13. Service Card
+| 14. Hero
+| 15. Service
+| 16. Funfact
+| 17. Testimonal
+| 18. Team
+| 19. Pricing Card
+| 20. Blog
+| 21. Cta
+| 22. Choose Us Contain
+| 23. Accordion
+| 24. Tab
+| 25. Contact
+| 26. Error Comming Card
+| 27. Sticky Content
+| 28. gallery
+ ................................................................*/
+
+@import "default/color_variable";
+@import "default/typography";
+@import "common/preloader";
+@import "common/spacing";
+@import "common/general";
+@import "common/slider";
+@import "common/video-modal";
+@import "common/header";
+@import "common/footer";
+@import "common/pagination";
+@import "shortcode/common-page-title";
+@import "shortcode/button";
+@import "shortcode/service-card";
+@import "shortcode/hero";
+@import "shortcode/service";
+@import "shortcode/funfact";
+@import "shortcode/testimonal";
+@import "shortcode/team";
+@import "shortcode/pricing-card";
+@import "shortcode/blog";
+@import "shortcode/cta";
+@import "shortcode/choose-us-contain";
+@import "shortcode/accordion";
+@import "shortcode/tab";
+@import "shortcode/contact";
+@import "shortcode/error-comming-card";
+@import "shortcode/sticky-content";
+@import "shortcode/gallery";
